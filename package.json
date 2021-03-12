@@ -1,5 +1,5 @@
 {
-  "name": "@nordicsemiconductor/asset-tracker-cloud-app",
+  "name": "@acme/web-app",
   "version": "0.0.0-development",
   "description": "Cat Tracker Web Application",
   "scripts": {
@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NordicSemiconductor/asset-tracker-cloud-app-js.git"
+    "url": "git+https://github.com/acme-cat-tracker/web-app.git"
   },
   "bugs": {
-    "url": "https://github.com/NordicSemiconductor/asset-tracker-cloud-app-js/issues"
+    "url": "https://github.com/acme-cat-tracker/web-app/issues"
   },
-  "homepage": "https://github.com/NordicSemiconductor/asset-tracker-cloud-app-js#readme",
+  "homepage": "https://github.com/acme-cat-tracker/web-app#readme",
   "keywords": [
     "Cloud",
     "IoT",
