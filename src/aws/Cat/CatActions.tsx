@@ -253,6 +253,38 @@ export const CatActions = ({ catId }: { catId: string }) => {
 															)}
 														>
 															<Collapsable
+																id={'cat:heartrate'}
+																title={<h3>{emojify('💓 Heart Rate')}</h3>}
+															>
+																<HistoricalDataLoader<{
+																	date: Date
+																	value: number
+																}>
+																	timestreamQueryContext={
+																		timestreamQueryContext
+																	}
+																	deviceId={catId}
+																	QueryString={(table) => `
+																		SELECT
+																		time as date,
+																		measure_value::double as value
+																		FROM ${table}
+																		WHERE deviceId='${catId}' 
+																		AND measure_name = 'heartrate'
+																		ORDER BY time DESC
+																		LIMIT 50
+																	`}
+																>
+																	{({ data }) => (
+																		<HistoricalDataChart
+																			data={data}
+																			type={'line'}
+																		/>
+																	)}
+																</HistoricalDataLoader>
+															</Collapsable>
+															<hr />
+															<Collapsable
 																id={'cat:roam'}
 																title={<h3>{emojify('📶 RSRP')}</h3>}
 															>
